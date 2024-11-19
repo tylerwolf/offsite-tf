@@ -20,5 +20,5 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "rocket2024-ws${var.workspace-number}-${var.team-name}"
+  bucket = "rocket-offsite2024-${var.team-name}-ws${var.workspace-number}"
 }
