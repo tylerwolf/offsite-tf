@@ -41,10 +41,10 @@ provider "aws" {
 
 resource "aws_s3_bucket" "bucket-west" {
   bucket = "rocket-offsite2024-${var.team-name}-ws${var.workspace-number}-west"
-  provider = "aws.WEST"
+  provider = aws.WEST
 }
 
 resource "aws_s3_bucket" "bucket-east" {
   bucket = "rocket-offsite2024-${var.team-name}-ws${var.workspace-number}-east"
-  provider = "aws.EAST"
+  provider = aws.EAST
 }
