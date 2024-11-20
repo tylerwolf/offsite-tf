@@ -31,13 +31,13 @@ variable "tfc_vault_backed_aws_dynamic_credentials" {
 provider "aws" {
   region = "us-west-2"
   alias = "WEST"
-  shared_config_files = [var.tfc_vault_backed_aws_dynamic_credentials.aliases["WEST"].shared_config_file]
+  shared_credentials_files = [var.tfc_vault_backed_aws_dynamic_credentials.aliases["WEST"].shared_credentials_file]
 }
 
 provider "aws" {
   region = "us-east-2"
   alias = "EAST"
-  shared_config_files = [var.tfc_vault_backed_aws_dynamic_credentials.aliases["EAST"].shared_config_file]
+  shared_credentials_files = [var.tfc_vault_backed_aws_dynamic_credentials.aliases["EAST"].shared_credentials_file]
 }
 
 resource "aws_s3_bucket" "bucket-west" {
